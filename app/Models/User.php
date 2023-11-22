@@ -20,6 +20,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\RateLimiter;
 use Laravel\Passport\HasApiTokens;
+use Illuminate\Database\Eloquent\Builder;
 use Mastodon;
 
 /**
@@ -42,6 +43,7 @@ use Mastodon;
  * @property string      language
  * @property Carbon      last_login
  * @property Status[]    $statuses
+ * @mixin Builder
  */
 class User extends Authenticatable implements MustVerifyEmail
 {
